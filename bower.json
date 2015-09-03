@@ -1,0 +1,20 @@
+{
+  "name": "angular_rails_blog",
+  "version": "0.0.0",
+  "authors": [
+    "pwdd <aina@pintowebdevelopment.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap-sass": "~3.3.5"
+  }
+}

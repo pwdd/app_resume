@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2" id="sidebar">
+      <div>
+        <h1 id="sidebar-title">Aina Pinto</h1>
+        <ul class="ul-sidebar">
+          <li class="has-child">
+            <a class="collapsed" role="button" data-toggle="collapse" data-target="#first" href="" aria-expanded="false" aria-controls="first">
+                Projects
+            </a>
+            <ul class="collapse" id="first">
+              <li class="no-child" ng-click="cl=1" ng-class='{"active-class": cl==1}'>
+                <a  href="#/home/categories/1">Ruby</a>
+              </li>
+              <li class="no-child" ng-click="cl=2" ng-class='{"active-class": cl==2}'>
+                <a  href="#/home/categories/2">Python</a>
+              </li>
+              <li class="no-child" ng-click="cl=3" ng-class='{"active-class": cl==3}'>
+                <a  href="#/home/categories/3">JavaScript</a>
+              </li>
+              <li class="no-child" ng-click="cl=4" ng-class='{"active-class": cl==4}'>
+                <a  href="#/home/categories/4">PHP</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child">
+              <a class="collapsed" class="closed" role="button" data-toggle="collapse" href="#second" aria-expanded="false" aria-controls="second">
+                Link with href
+              </a>
+              <ul class="collapse" id="second">
+                <li>fadsfadf</li>
+                <li>fadsfadf</li>
+                <li>fadsfadf</li>
+                <li>fadsfadf</li>
+              </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="main" class="col-md-10 col-md-offset-2" style="counter-reset: fromLines 0">
+    	<ui-view></ui-view>        
+    </div>
+  </div>
+</div>
