@@ -2,16 +2,16 @@
 
 	<div class="numbered">
 		<p>
-			<span class="pink">class </span>
-			{{category.name | capitalize}}
-			<span class="green"><em>&lt; {{category.inheritance}}</em></span>
+			<span class="pink">class</span>
+			<span class="class-name">{{name}}</span>
+			<span class="green"><em>&lt; {{inheritance}}</em></span>
 		</p>
 	</div>
 
 	<div class="numbered tabbed-once">
 		<p>
-			<span class="pink">{{category.attr }}</span>
-			<span class="purple">{{category.attr_name}}</span>
+			<span class="pink">{{attr }}</span>
+			<span class="purple">{{attr_name}}</span>
 		</p>
 	</div>
 
@@ -37,10 +37,10 @@
 		  <p>&nbsp;</p>         
 		</div>
 
-		<div ng-show="{{post.image_url}}">
+		<div>
 			<div class="numbered tabbed-twice">
 			  <a href="{{post.link}}" target="_blank">
-					<img src="{{post.image_url}}" alt="{{post.image_alt}}">
+					<img src="<%= asset_path('/assets/{{post.image_url}}') %>" alt="{{post.image_alt}}">
 			  </a>
 			</div>
 		</div>
