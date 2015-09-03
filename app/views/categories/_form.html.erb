@@ -1,0 +1,30 @@
+<%= form_for(@category) do |f| %>
+	<ul>
+		<% @category.errors.full_messages.each do |error| %>
+		<li><%= error %></li>
+		<% end %>
+	</ul>
+	<p>
+		<%= f.label :name %>
+		<br>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :inheritance %>
+		<br>
+		<%= f.text_field :inheritance %>
+	</p>
+	<p>
+		<%= f.label :attr %>
+		<br>
+		<%= f.text_field :attr %>
+	</p>
+	<p>
+		<%= f.label :attr_name %>
+		<br>
+		<%= f.text_field :attr_name %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>	
+<% end %>

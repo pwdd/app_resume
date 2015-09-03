@@ -48,6 +48,9 @@ pwdd.controller('CategoriesCtrl', [
 	function($scope, categories, category) {
 		$scope.id = category.id;
 		$scope.name = category.name;
+    $scope.inheritance = category.inheritance;
+    $scope.attr = category.attr;
+    $scope.attr_name = category.attr_name;
 		$scope.posts = category.posts;
 	}
 ]);
