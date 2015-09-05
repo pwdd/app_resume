@@ -1,40 +1,54 @@
-<%= form_for(@post, html: {multipart: true}) do |f| %>
+<%= form_for(@post, html: {class: "form-horizontal"}) do |f| %>
 	<ul>
 		<% @post.errors.full_messages.each do |error| %>
 		<li><%= error %></li>
 		<% end %>
 	</ul>
-	<p>
-		<%= f.label :title %>
-		<br>
-		<%= f.text_field :title %>
-	</p>
-	<p>
-		<%= f.label :body %>
-		<br>
-		<%= f.text_area :body %>
-	</p>
-	<p>
-		<%= f.label :category_list %>
-		<br>
-		<%= f.text_field :category_list %>
-	</p>
-	<p>
-		<%= f.label :image_url %>
-		<br>
-		<%= f.text_field :image_url %>
-	</p>
-	<p>
-		<%= f.label :image_alt %>
-		<br>
-		<%= f.text_field :image_alt %>
-	</p>
-	<p>
-		<%= f.label :link %>
-		<br>
-		<%= f.text_field :source_code %>
-	</p>
-	<p>
-		<%= f.submit %>
-	</p>	
+	<div class="form-group">
+		<%= f.label :title, class: "col-md-3 control-label" %>
+		<div class="col-md-9">
+			<%= f.text_field :title, class: "form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<%= f.label :category_list, class: "col-md-3 control-label" %>
+		<div class="col-md-9">
+			<%= f.text_field :category_list, class: "form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<%= f.label :image_url, class: "col-md-3 control-label" %>
+		<div class="col-md-9">
+			<%= f.text_field :image_url, class: "form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<%= f.label :image_alt, class: "col-md-3 control-label" %>
+		<div class="col-md-9">
+			<%= f.text_field :image_alt, class: "form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<%= f.label :link, class: "col-md-3 control-label" %>
+		<div class="col-md-9">
+			<%= f.text_field :link, class: "form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<%= f.label :source_code, class: "col-md-3 control-label" %>
+		<div class="col-md-9">
+			<%= f.text_field :source_code, class: "form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<%= f.label :body, class: "col-md-3 control-label" %>
+		<div class="col-md-9">
+			<%= f.text_area :body, class: "form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-md-offset-3 col-md-9">
+			<%= f.submit "Submit", class: "btn btn-primary" %>	
+		</div>
+	</div>
 <% end %>

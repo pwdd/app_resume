@@ -1,13 +1,18 @@
-<h1><%= @post.title %></h1>
-<p>
-  Categories:
-  <% @post.categories.each do |category| %>
-    <%= link_to category.name, category_path(category) %>
-  <% end %>
-</p>
+<div class="row show-post">
+	<div class="col-md-4 col-md-offset-4">
+		<p>Title: <%= @post.title %></p>
+		<p>
+		Belongs to categories:
+		<% @post.categories.each do |category| %>
+		  <%= link_to category.name, category_path(category) %>
+		<% end %>
+		</p>
 
-
-<p><%= @post.body.html_safe %></p>
-<%= link_to 'delete', post_path(@post), method: :delete, data: { confirm: "really delete it?" } %>
-<%= link_to 'edit', edit_post_path(@post) %>
-<%= link_to "<< back to posts list", posts_path %>
+		<div class="btn-group mt30" role="group">
+		<%= link_to 'delete', post_path(@post), method: :delete, 
+		class: "btn btn-danger", data: { confirm: "really delete it?" } %>
+		<%= link_to 'edit', edit_post_path(@post), class: "btn btn-success" %>
+		<%= link_to "<span class='glyphicon glyphicon-backward'></span>back to posts list".html_safe, posts_path, class: "btn btn-default" %>
+		</div>
+	</div>
+</div>

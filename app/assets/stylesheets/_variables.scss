@@ -9,6 +9,7 @@ $sidebar: #e6e6e6;
 $dark-gray: #5c5c5c;
 $medium-gray: #9d9d9d;
 $numbers: #a1a1a1;
+$comment: #999999;
 
 @mixin transition($args...) {
   -webkit-transition: $args;

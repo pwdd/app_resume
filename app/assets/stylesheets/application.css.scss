@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
@@ -26,13 +27,49 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+p {
+	color: white;
+	font-size: 1.8rem;
+	margin-left: 2.8rem;
+	margin-bottom: 0.7rem;
+}
+
 a:focus, a:active, a:hover {
 	outline: none;
 	text-decoration: none;
 }
 
+input, textarea, select {
+	color: black;
+}
+
+.container {
+	margin: 0;
+	padding: 0;
+}
+
+.col-md-2 {
+	background-color: $sidebar;
+}
+
+.col-md-10 {
+	margin-top: 20px;
+}
+
+.glyphicon {
+	margin-right: 12px;
+}
+
 .no-margin {
 	margin: 0;
+}
+
+.m30 {
+	margin: 30px;
+}
+
+.mt30 {
+	margin-top: 30px
 }
 
 .pink {
@@ -51,24 +88,19 @@ a:focus, a:active, a:hover {
 	color: $purple;
 }
 
+.white {
+	color: #ffffff;
+}
+
+.comment-home {
+	line-height: 1.5;
+}
+
 #main {
 	font-family: 'Inconsolata';
-	font-size: 1.2em;
+	font-size: 1.4em;
 	line-height: 0.8;
 	padding-left: 0;
-}
-
-.container-fluid {
-	margin: 0;
-	padding: 0;
-}
-
-.col-md-2 {
-	background-color: $sidebar;
-}
-
-.col-md-10 {
-	margin-top: 20px;
 }
 
 #sidebar {
@@ -145,35 +177,7 @@ a:focus, a:active, a:hover {
 	}
 }
 
-p {
-	color: white !important;
-	margin-left: 28px;
-	margin-bottom: 7px;
+.control-label {
+	color: #ffffff;
 }
 
-.numbered {
-	a {
-		display: inline-block;
-	}
-}
-
-.numbered:before {
-  float: left;
-  content: counter(fromLines);
-  counter-increment: fromLines;
-  color: $numbers;
-  text-align: right;
-  width: 20px;
-}
-
-.numbered.tabbed-once:before {
-	margin-right: 40px;
-}
-
-.numbered.tabbed-twice:before {
-	margin-right: 80px;
-}
-
-.class-name {
-	text-transform: capitalize;
-}

@@ -1,11 +1,15 @@
-<h1>all posts</h1>
+<h1 class="text-center white m30">all posts</h1>
 
-<ul id="posts">
-	<% @posts.each do |post| %>
-		<li>
-			<%= link_to post.title, post_path(post) %>
-		</li>
-	<% end %>
-</ul>
-
-<%= link_to "new post", new_post_path %>
+<div class="row">
+	<div class="col-md-4 col-md-offset-4">
+		<ul id="posts" class="list-unstyled">
+			<% @posts.each do |post| %>
+				<li>
+					<span class="glyphicon glyphicon-menu-right white"></span>
+					ID: <%= post.id %> | <%= link_to post.title, post_path(post) %>
+				</li>
+			<% end %>
+		</ul>
+		<%= link_to "new post", new_post_path, class: "btn btn-default mt30" %>		
+	</div>
+</div>

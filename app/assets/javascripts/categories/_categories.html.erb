@@ -19,12 +19,16 @@
 	  <p>&nbsp;</p>         
 	</div>
 	
-	<div ng-repeat="post in posts">
+	<div ng-repeat="post in posts | orderBy:'id'">
 		<div class="numbered tabbed-once">
 		  <p>
 		  	<span class="pink">def </span>
 		  	<span class="green">{{post.title}}</span> ( <span class="orange">source_code</span> )
 		  </p>         
+		</div>
+
+		<div ng-show="{{post.body}}" class="numbered tabbed-twice">
+			<p class="comment">{{post.body}}</p>
 		</div>
 
 		<div class="numbered tabbed-twice">
@@ -33,16 +37,14 @@
 		  </p>         
 		</div>
 
-		<div class="numbered tabbed-once">
+		<div ng-show="{{post.link}}" class="numbered tabbed-once">
 		  <p>&nbsp;</p>         
 		</div>
 
-		<div>
-			<div class="numbered tabbed-twice">
-			  <a href="{{post.link}}" target="_blank">
-					<img src="<%= asset_path('/assets/{{post.image_url}}') %>" alt="{{post.image_alt}}">
-			  </a>
-			</div>
+		<div ng-show="{{post.link}}" class="numbered tabbed-twice">
+		  <a href="{{post.link}}" target="_blank">
+				<img src="<%= asset_path('/assets/{{post.image_url}}') %>" alt="{{post.image_alt}}">
+		  </a>
 		</div>
 
 		<div class="numbered tabbed-once">

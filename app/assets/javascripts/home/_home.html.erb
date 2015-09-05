@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div class="col-md-2" id="sidebar">
       <div>
@@ -38,7 +38,24 @@
       </div>
     </div>
     <div id="main" class="col-md-10 col-md-offset-2" style="counter-reset: fromLines 0">
-    	<ui-view></ui-view>        
+    	<ui-view>
+        <div class="col-md-10 no-margin">
+          <p class="comment comment-home">=begin</p>
+          <p class="comment comment-home">
+            This resume is freely inspired by the look of Sublime Text 2 with the theme Monokai.
+          </p>
+          <p class="comment comment-home">
+            On your left, you see links to my projects, education and experience. Although
+            it looks like code, it is not. The idea was to write everything in a way that reminds Ruby on Rails code.
+          </p>
+          <p class="comment comment-home">
+            If you need to see my resume in a more traditional way, please download
+            the pdf version <a href="">here</a> or take a look at the last item on the left menu, 
+            'traditional resume.'
+          </p>
+          <p class="comment comment-home">=end</p>
+        </div>
+      </ui-view>        
     </div>
   </div>
 </div>
