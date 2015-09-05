@@ -72,9 +72,6 @@ input, textarea, select {
 	margin-top: 30px
 }
 
-.w200 {
-	width: 200px;
-}
 .pink {
 	color: $pink;
 }
@@ -186,4 +183,8 @@ input, textarea, select {
 
 .btn-login {
 	padding-left: 0;
+}
+
+.form-smaller {
+	width: 230px;
 }
