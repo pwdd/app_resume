@@ -34,6 +34,7 @@ pwdd.config([
             }]
         }
     });
+    $urlRouterProvider.otherwise("home");
   }]);
 
 
