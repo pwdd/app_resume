@@ -18,13 +18,14 @@ $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "variables.scss";
+@import "simple_resume.scss";
 
 body {
 	background-color: $background;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0;
+	color: #ffffff;
 }
 
 p {
@@ -32,6 +33,10 @@ p {
 	font-size: 1.8rem;
 	margin-left: 2.8rem;
 	margin-bottom: 0.7rem;
+}
+
+a {
+	color: $blue;
 }
 
 a:focus, a:active, a:hover {
@@ -48,11 +53,11 @@ input, textarea, select {
 	padding: 0;
 }
 
-.col-md-2 {
+.col-xs-2 {
 	background-color: $sidebar;
 }
 
-.col-md-10 {
+.col-xs-10 {
 	margin-top: 20px;
 }
 
@@ -66,6 +71,10 @@ input, textarea, select {
 
 .m30 {
 	margin: 30px;
+}
+
+.m50 {
+	margin: 50px;
 }
 
 .mt30 {
@@ -86,6 +95,10 @@ input, textarea, select {
 
 .purple {
 	color: $purple;
+}
+
+.yellow {
+	color: $yellow;
 }
 
 .white {
@@ -121,6 +134,7 @@ input, textarea, select {
 	list-style: none;
 	padding-left: 20px;
 	li {
+		margin-bottom: 5px;
 		&.has-child {
 			a {
 				color: black;
@@ -166,6 +180,16 @@ input, textarea, select {
 					}
 				}
 			}
+		}
+		&.single {
+			a {
+				color: black;
+				margin-left: 15px;
+			}
+		}
+		&.single.active-class {
+			margin-left: -20px;
+			padding-left: 20px;
 		}
 	}
 }

@@ -1,0 +1,60 @@
+@import "variables.scss";
+
+#simpler-resume {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+		p {
+		font-size: 16px !important;
+		line-height: 1.3;
+		margin-left: 0;
+		letter-spacing: 0.09em;
+		strong {
+			border-bottom: 1px solid #fff;
+		}
+	}
+}
+
+.mb30 {
+	margin-bottom: 30px;
+}
+
+.section-title {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.resume-list {
+	li {
+		background-color: rgba(255, 255, 255, 0.1);
+		color: #ffffff;
+	}
+}
+
+.pink-badge {
+	background-color: $pink;
+}
+
+.portfolio-desc {
+	p {
+		margin-left: 0 !important;
+		background-color: $yellow;
+		color: $background;
+		padding: 10px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		margin-bottom: 20px;
+	}
+}
+
+#projects-notice {
+	line-height: 1.5;
+	font-style: italic;
+}
+
+.work-link {
+	border-bottom: 1px solid $blue;
+	margin-top: 25px;
+	margin-bottom: 18px;
+	padding-bottom: 10px;
+	display: block;
+}
