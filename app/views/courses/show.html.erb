@@ -1,0 +1,5 @@
+<h2><%= @course.name %></h2>
+
+<%= link_to "edit", edit_course_path(@course) %>
+<br>
+<%= link_to 'delete', course_path(@course), method: :delete, data: { confirm: "really delete it?" } %>

@@ -7,9 +7,21 @@ pwdd.factory('categories', ['$http', function($http) {
 	o.get = function (id) {
     return $http.get('/categories/' + id + '.json').then(function (res) {
       return res.data;
-  });
+    });
   };
   return o;
+}]);
+
+pwdd.factory('courses', ['$http', function($http) {
+  var e = {
+    courses: []
+  };
+  e.getAll = function() {
+    return $http.get('/courses.json').success(function(data) {
+      angular.copy(data, e.courses);
+    });
+  };
+  return e;
 }]);
 
 pwdd.config([
@@ -20,8 +32,7 @@ pwdd.config([
     $stateProvider
     .state('home', {
         url: '/home',
-        templateUrl: 'home/_home.html',
-        controller: 'MainCtrl',
+        templateUrl: 'home/_home.html'
     });
     $stateProvider
     .state('home.categories', {
@@ -29,10 +40,21 @@ pwdd.config([
         templateUrl: 'categories/_categories.html',
         controller: 'CategoriesCtrl',
         resolve: {
-            category: ['$stateParams', 'categories', function($stateParams, categories) {
-                return categories.get($stateParams.categoryId);
-            }]
+          category: ['$stateParams', 'categories', function($stateParams, categories) {
+              return categories.get($stateParams.categoryId);
+          }]
         }
+    });
+    $stateProvider
+    .state('home.courses', {
+        url: '/courses',
+        templateUrl: 'education/_courses.html',
+        controller: 'CoursesCtrl',
+        resolve: {
+          postPromise: ['courses', function(courses){
+              return courses.getAll();
+          }]
+      }
     });
     $stateProvider
     .state('home.simple_resume', {
@@ -41,11 +63,6 @@ pwdd.config([
     });
     $urlRouterProvider.otherwise("home");
   }]);
-
-
-pwdd.controller('MainCtrl', function ($state) {
-  $state.includes('home.categories');
-});
 
 pwdd.controller('CategoriesCtrl', [
 	'$scope',
@@ -60,4 +77,13 @@ pwdd.controller('CategoriesCtrl', [
     $scope.attr_name = category.attr_name;
 		$scope.posts = category.posts;
 	}
+]);
+
+pwdd.controller('CoursesCtrl', [
+  '$scope',
+  'courses',
+  function($scope, courses) {
+    $scope.courses = courses.courses;
+    $scope.where = courses.where;
+  }
 ]);

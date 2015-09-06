@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+	before_action :set_category, only: [:show, :edit, :update, :destroy]
+
 	def index
 		@categories = Category.all
 		respond_to do |format|
@@ -8,7 +10,6 @@ class CategoriesController < ApplicationController
 	end
 	
 	def show
-		@category = Category.find(params[:id])
 		respond_to do |format|
       format.html
       format.json { render json: @category}
@@ -30,7 +31,6 @@ class CategoriesController < ApplicationController
 	end
 
 	def edit
-		@category = Category.find(params[:id])
 		respond_to do |format|
       format.html
       format.json { render json: @category}
@@ -38,20 +38,22 @@ class CategoriesController < ApplicationController
 	end
 
 	def update
-		@category = Category.find(params[:id])
 		@category.update(category_params)
 
 		redirect_to category_path(@category)
 	end
 
 	def destroy
-		@category = Category.find(params[:id])
 		@category.destroy
 
 		redirect_to categories_path
 	end
 
 	private
+	def set_category
+		@category = Category.find(params[:id])
+	end
+
 	def category_params
 		params.require(:category).permit(:name, :description, :inheritance, :attr, :attr_name)
 	end

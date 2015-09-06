@@ -28,12 +28,12 @@
 		</div>
 
 		<div ng-show="{{post.body}}" class="numbered tabbed-twice">
-			<p class="comment" ng-bind-html="post.body">{{post.body}}</p>
+			<p class="comment">{{post.body}}</p>
 		</div>
 
 		<div class="numbered tabbed-twice" ng-show="{{post.source_code}}">
 		  <p>@source = 
-		  	<a href="{{post.source_code}}" target="_blank">source_code</a>
+		  	<a ng-href="{{post.source_code}}" target="_blank">source_code</a>
 		  </p>         
 		</div>
 
@@ -42,7 +42,7 @@
 		</div>
 
 		<div ng-show="{{post.link}}" class="numbered tabbed-twice">
-		  <a href="{{post.link}}" target="_blank">
+		  <a ng-href="{{post.link}}" target="_blank">
 				<img src="<%= asset_path('/assets/{{post.image_url}}') %>" alt="{{post.image_alt}}">
 		  </a>
 		</div>

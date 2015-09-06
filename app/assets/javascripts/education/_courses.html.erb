@@ -1,0 +1,11 @@
+<div class="col-xs-12 no-margin" ng-repeat="course in courses">
+	<div class="numbered">
+		<p><span class="pink">gem </span><span class="yellow">'{{course.name}}'</span></p>		
+	</div>
+	<div class="numbered">
+		<p class="comment"># {{course.status}}<span ng-show="{{course.status}}">:</span> {{course.where}} || {{course.university}}</p>		
+	</div>
+	<div class="numbered">
+		<p>&nbsp;</p>
+	</div>
+</div>
