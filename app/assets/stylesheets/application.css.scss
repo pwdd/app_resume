@@ -22,6 +22,7 @@ $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 
 body {
 	background-color: $background;
+	margin-bottom: 40px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -138,6 +139,7 @@ input, textarea, select {
 		&.has-child {
 			a {
 				color: black;
+				display: block;
 				&:hover {
 					text-decoration: none;
 					color: black;
@@ -211,4 +213,12 @@ input, textarea, select {
 
 .form-smaller {
 	width: 230px;
+}
+
+footer {
+	position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: $footer;
 }
