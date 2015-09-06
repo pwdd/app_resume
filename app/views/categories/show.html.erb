@@ -1,5 +1,9 @@
 <h2>Articles Tagged with <%= @category.name %></h2>
 
+<%= link_to "edit", edit_category_path(@category) %>
+<br>
+<%= link_to 'delete', category_path(@category), method: :delete, data: { confirm: "really delete it?" } %>
+
 <ul>
   <% @category.posts.each do |post| %>
     <li><%= link_to post.title, post_path(post) %></li>

@@ -41,7 +41,7 @@ class CategoriesController < ApplicationController
 		@category = Category.find(params[:id])
 		@category.update(category_params)
 
-		redirect_to post_path(@category)
+		redirect_to category_path(@category)
 	end
 
 	def destroy
@@ -53,7 +53,7 @@ class CategoriesController < ApplicationController
 
 	private
 	def category_params
-		params.require(:category).permit(:name, :inheritance, :attr, :attr_name)
+		params.require(:category).permit(:name, :description, :inheritance, :attr, :attr_name)
 	end
 end
 

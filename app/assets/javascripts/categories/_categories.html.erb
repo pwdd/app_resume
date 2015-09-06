@@ -1,4 +1,4 @@
-<div class="col-xs-10 no-margin">
+<div class="col-xs-12 no-margin">
 
 	<div class="numbered">
 		<p>
@@ -23,15 +23,15 @@
 		<div class="numbered tabbed-once">
 		  <p>
 		  	<span class="pink">def </span>
-		  	<span class="green">{{post.title}}</span> ( <span class="orange">source_code</span> )
+		  	<span class="green">{{post.title}}</span> <span ng-show="{{post.source_code}}">( <span class="orange">source_code</span> )</span>
 		  </p>         
 		</div>
 
 		<div ng-show="{{post.body}}" class="numbered tabbed-twice">
-			<p class="comment">{{post.body}}</p>
+			<p class="comment" ng-bind-html="post.body">{{post.body}}</p>
 		</div>
 
-		<div class="numbered tabbed-twice">
+		<div class="numbered tabbed-twice" ng-show="{{post.source_code}}">
 		  <p>@source = 
 		  	<a href="{{post.source_code}}" target="_blank">source_code</a>
 		  </p>         

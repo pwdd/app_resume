@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150906062219) do
+ActiveRecord::Schema.define(version: 20150906080719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 20150906062219) do
 
   add_index "categorizations", ["category_id"], name: "index_categorizations_on_category_id", using: :btree
   add_index "categorizations", ["post_id"], name: "index_categorizations_on_post_id", using: :btree
+
+  create_table "courses", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "where"
+    t.string   "university"
+    t.string   "status"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
