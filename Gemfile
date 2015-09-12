@@ -9,7 +9,6 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'angular-rails-templates'
 gem 'sprockets', '2.12.3'
-gem 'devise'
 
 gem 'rails_12factor', group: :production
 

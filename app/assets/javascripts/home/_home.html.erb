@@ -36,12 +36,7 @@
     <ul class="list-inline pull-right">
       <li><a class="white" href="https://github.com/pwdd" target="_blank">Github |</a></li>
       <li><a class="white" href="https://www.linkedin.com/in/ainapinto" target="_blank">LinkedIn |</a></li>
-      <li class="white">ainapinto[at]gmail[dot]com</li>
-      <% if user_signed_in? %>
-        <%= link_to "Logout", user_session_destroy_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Login', new_user_session_path %>
-      <% end %>      
+      <li class="white">ainapinto[at]gmail[dot]com</li>      
     </ul>
   </footer>
 </div>
