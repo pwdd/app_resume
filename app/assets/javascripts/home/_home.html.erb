@@ -1,71 +1,31 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-2" id="sidebar">
-      <div>
-        <h1 id="sidebar-title">Aina Pinto</h1>
-        <ul class="ul-sidebar">
-          <li class="has-child">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#first" href="" aria-expanded="false" aria-controls="first">
-                Projects
-            </a>
-            <ul class="collapse" id="first">
-              <li class="no-child" ng-click="cl=1" ng-class='{"active-class": cl==1}'>
-                <a  href="#/home/categories/1">Ruby</a>
-              </li>
-              <li class="no-child" ng-click="cl=2" ng-class='{"active-class": cl==2}'>
-                <a  href="#/home/categories/2">Python</a>
-              </li>
-              <li class="no-child" ng-click="cl=3" ng-class='{"active-class": cl==3}'>
-                <a  href="#/home/categories/7">JavaScript</a>
-              </li>
-              <li class="no-child" ng-click="cl=4" ng-class='{"active-class": cl==4}'>
-                <a  href="#/home/categories/6">PHP</a>
-              </li>
-            </ul>
-          </li>
-          <li class="has-child">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#second" href="" aria-expanded="false" aria-controls="second">
-                Work Experience
-            </a>
-            <ul class="collapse" id="second">
-              <li class="no-child" ng-click="cl=5" ng-class='{"active-class": cl==5}'>
-                <a  href="#/home/categories/1">Freelancing</a>
-              </li>
-              <li class="no-child" ng-click="cl=6" ng-class='{"active-class": cl==6}'>
-                <a  href="#/home/categories/1">Volunteering</a>
-              </li>
-            </ul>
-          </li>
-          <li class="no-child single" ng-click="cl=7" ng-class='{"active-class": cl==7}'>
-            <a  href="#/home/courses">Continued Education</a>
-          </li>
-          <li class="no-child single" ng-click="cl=8" ng-class='{"active-class": cl==8}'>
-            <a  href="#/home/education">Education</a>
-          </li>
-          <li class="no-child single" ng-click="cl=9" ng-class='{"active-class": cl==9}'>
-            <a  href="#/home">Languages</a>
-          </li>
-          <li class="no-child single" ng-click="cl=10" ng-class='{"active-class": cl==10}'>
-            <a  href="#/home/simple_resume">Simpler Resume</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <sidebar></sidebar>
+    </div>      
     <div id="main" class="col-xs-10 col-xs-offset-2" style="counter-reset: fromLines 0">
     	<ui-view>
-        <div class="col-md-10 no-margin">
+        <div class="col-xs-12 no-margin">
+          <h1 class="pink" id="my-name">Aina Pinto</h1>
+          <h2 id="my-title">web developer</h2>
+          <div class="m30">
+            <p class="source-code">Source code for this resume <a href="https://github.com/pwdd/rails_resume" target="_blank">here</a></p>
+            <ul class="list-inline home-list">
+              <li><a href="https://github.com/pwdd" target="_blank">Github |</a></li>
+              <li><a href="https://www.linkedin.com/in/ainapinto" target="_blank">LinkedIn |</a></li>
+              <li class="white">ainapinto[at]gmail[dot]com</li>
+            </ul>
+          </div>
           <p class="comment comment-home">=begin</p>
           <p class="comment comment-home">
-            This resume is freely inspired by the look of Sublime Text 2 with the theme Monokai.
+            This resume is inspired by the look of Sublime Text and it is an app developed using Ruby on Rails as the backend framework and AngularJS on the frontend.
           </p>
           <p class="comment comment-home">
             On your left, you see links to my projects, education and experience. Although
             it looks like code, it is not. The idea was to write everything in a way that reminds Ruby on Rails code.
           </p>
           <p class="comment comment-home">
-            If you need to see my resume in a more traditional way, please download
-            the pdf version <a href="">here</a> or take a look at the last item on the left menu, 
-            'traditional resume.'
+            If you need to see my resume in a more traditional way, please take a look at 'Simpler Resume' on the left menu.
           </p>
           <p class="comment comment-home">=end</p>
         </div>
@@ -73,6 +33,10 @@
     </div>
   </div>
   <footer>
-    dafdfd
+    <ul class="list-inline pull-right">
+      <li><a class="white" href="https://github.com/pwdd" target="_blank">Github |</a></li>
+      <li><a class="white" href="https://www.linkedin.com/in/ainapinto" target="_blank">LinkedIn |</a></li>
+      <li class="white">ainapinto[at]gmail[dot]com</li>
+    </ul>
   </footer>
 </div>

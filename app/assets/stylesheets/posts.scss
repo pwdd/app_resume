@@ -4,29 +4,6 @@
 
 @import "variables.scss";
 
-.numbered {
-	a {
-		display: inline-block;
-	}
-}
-
-.numbered:before {
-  float: left;
-  content: counter(fromLines);
-  counter-increment: fromLines;
-  color: $numbers;
-  text-align: right;
-  width: 20px;
-}
-
-.numbered.tabbed-once:before {
-	margin-right: 40px;
-}
-
-.numbered.tabbed-twice:before {
-	margin-right: 80px;
-}
-
 .class-name {
 	text-transform: capitalize;
 }

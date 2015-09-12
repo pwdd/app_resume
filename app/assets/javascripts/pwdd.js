@@ -92,3 +92,9 @@ pwdd.controller('CoursesCtrl', [
     $scope.where = courses.where;
   }
 ]);
+
+pwdd.directive('sidebar', function() {
+  return {
+    templateUrl: 'home/_sidebar.html'
+  };
+});

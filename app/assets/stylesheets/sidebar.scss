@@ -1,0 +1,88 @@
+@import "variables.scss";
+
+#sidebar {
+	height: 100%;
+	position: fixed;
+	padding: 0;
+}
+
+#sidebar-title {
+	font-size: 1.4em;
+	color: $dark-gray;
+	text-shadow: 1px 1px white;
+	text-transform: uppercase;
+	margin: 10px 25px;
+}
+
+.ul-sidebar {
+	list-style: none;
+	padding-left: 20px;
+	li {
+		margin-bottom: 5px;
+		&.has-child {
+			a {
+				color: black;
+				display: block;
+				&:hover {
+					text-decoration: none;
+					color: black;
+				}
+				&:focus {
+					a:hover {
+						text-decoration: none;
+					}
+				}
+				&:active {
+					text-decoration: none;
+					a:hover {
+						text-decoration: none;
+					}
+				}
+				&.collapsed:before {
+					content: "\25B6";
+					color: $dark-gray;			
+				}
+				&:before {
+					content: "\25BC";
+					color: $dark-gray;
+				}
+			}
+		}
+		ul {
+			list-style: none;
+			padding-left: 30px;
+			.no-child {
+				margin-left: -35px;
+				display: block;
+				a {
+					padding-left: 35px;
+					cursor: pointer;
+					&:before {
+					content: "";
+					}
+					&.collpased:before {
+						content: "";
+					}
+				}
+			}
+		}
+		&.single {
+			a {
+				color: black;
+				margin-left: 15px;
+			}
+		}
+		&.single.active-class {
+			margin-left: -20px;
+			padding-left: 20px;
+		}
+	}
+}
+
+.active-class {
+	background-color: $medium-gray;
+	a {
+		color: white !important;
+	}
+}
+
