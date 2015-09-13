@@ -27,16 +27,17 @@
     <ul class="list-inline pull-right">
       <li><a class="white" href="https://github.com/pwdd" target="_blank">Github |</a></li>
       <li><a class="white" href="https://www.linkedin.com/in/ainapinto" target="_blank">LinkedIn |</a></li>
-      <li class="white">ainapinto[at]gmail[dot]com</li>      
+      <li class="white">ainapinto[at]gmail[dot]com</li>
+      <% if user_signed_in? %>
+      <li class="white">
+        <%= link_to('logout', method: :delete, destroy_user_session_path) %>        
+      </li>
+      <% else %>
+      <li class="white">
+        <%= link_to('login', new_user_session_path) %>        
+      </li>
+      <% end %>
     </ul>
-    <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    <% end %>
   </footer>
 </body>
 </html>
