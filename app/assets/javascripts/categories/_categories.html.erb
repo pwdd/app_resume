@@ -23,7 +23,7 @@
 		<div class="numbered tabbed-once">
 		  <p>
 		  	<span class="pink">def </span>
-		  	<span class="green">{{post.title}}</span> <span ng-show="{{post.source_code}}">( <span class="orange">source_code</span> )</span>
+		  	<span class="green">{{post.title}}</span> <span>( <span class="orange">source_code</span>, <span class="orange">url</span> )</span>
 		  </p>         
 		</div>
 
@@ -31,11 +31,17 @@
 			<p class="comment"># {{post.body}}</p>
 		</div>
 
-		<div class="numbered tabbed-twice" ng-show="{{post.source_code}}">
+		<div class="numbered tabbed-twice">
 		  <p>@source = 
 		  	<a ng-href="{{post.source_code}}" target="_blank">source_code</a>
 		  </p>         
 		</div>
+		<div class="numbered tabbed-twice">
+		  <p>@url = 
+		  	<a ng-href="{{post.link}}" target="_blank">url</a>
+		  </p>         
+		</div>
+
 
 		<div class="numbered tabbed-once">
 		  <p><span class="pink">end</span></p>
