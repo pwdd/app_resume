@@ -27,14 +27,14 @@
     <ul class="list-inline pull-right">
       <li><a class="white" href="https://github.com/pwdd" target="_blank">Github |</a></li>
       <li><a class="white" href="https://www.linkedin.com/in/ainapinto" target="_blank">LinkedIn |</a></li>
-      <li class="white">ainapinto[at]gmail[dot]com</li>
+      <li class="white">ainapinto[at]gmail[dot]com | </li>
       <% if user_signed_in? %>
-      <li class="white">
-        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <li>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "white" %>
       </li>
       <% else %>
-      <li class="white">
-        <%= link_to "Login", new_user_session_path %>
+      <li>
+        <%= link_to "Login", new_user_session_path, class: "white" %>
       </li>
       <% end %>
     </ul>
