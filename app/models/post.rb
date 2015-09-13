@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
 	end
 
 	def category_list=(categories_string)
-		category_names = categories_string.split(",").map { |s| s.strip.downcase }.uniq
+		category_names = categories_string.split(",").map { |s| s.strip }.uniq
 		new_or_found_categories = category_names.map { |name|  Category.find_or_create_by(name: name) }
 		self.categories = new_or_found_categories
 	end
