@@ -30,11 +30,11 @@
       <li class="white">ainapinto[at]gmail[dot]com</li>
       <% if user_signed_in? %>
       <li class="white">
-        <%= link_to('logout', method: :delete, destroy_user_session_path) %>        
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
       </li>
       <% else %>
       <li class="white">
-        <%= link_to('login', new_user_session_path) %>        
+        <%= link_to "Login", new_user_session_path %>
       </li>
       <% end %>
     </ul>
