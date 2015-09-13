@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module Resume
   class Application < Rails::Application
     config.active_record.raise_in_transactional_callbacks = true
+    config.action_controller.include_all_helpers = false
 
     # Bower asset paths
     root.join('vendor', 'assets', 'bower_components').to_s.tap do |bower_path|
