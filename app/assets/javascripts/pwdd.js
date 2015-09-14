@@ -62,6 +62,11 @@ pwdd.config([
       templateUrl: 'education/_education.html'
     });
     $stateProvider
+    .state('home.languages', {
+      url: '/languages',
+      templateUrl: 'education/_languages.html'
+    });
+    $stateProvider
     .state('home.simple_resume', {
       url: '/simple_resume',
       templateUrl: 'simple_resume/_simple_resume.html'
