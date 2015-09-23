@@ -1,3 +1,17 @@
+.small-screen {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.regular-screen {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
 body {
   background-color: $background;
   margin-bottom: 40px;
@@ -130,6 +144,7 @@ input, textarea, select {
 .comment-home {
   line-height: 1.5;
   color: $comment;
+  font-size: 1em;
 }
 
 .source-code {

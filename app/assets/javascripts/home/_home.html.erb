@@ -1,35 +1,53 @@
-<div class="container-fluid">
-<!--   <div class="row"> -->
-    <div id="sidebar">
-      <sidebar></sidebar>
-    </div>      
-    <div id="main" style="counter-reset: fromLines 0">
-      <ui-view>
-        <div class="no-margin">
-          <h1 class="pink" id="my-name">Aina Pinto</h1>
-          <h2 id="my-title">web developer</h2>
-          <div class="m30">
-            <p class="source-code">Source code for this resume <a href="https://github.com/pwdd/rails_resume" target="_blank">here</a></p>
-            <ul class="list-inline home-list">
-              <li><a href="https://github.com/pwdd" target="_blank">Github |</a></li>
-              <li><a href="https://www.linkedin.com/in/ainapinto" target="_blank">LinkedIn |</a></li>
-              <li class="white">ainapinto[at]gmail[dot]com</li>
-            </ul>
-          </div>
-          <p class="comment comment-home">=begin</p>
-          <p class="comment comment-home">
-            This resume was developed using Ruby on Rails and AngularJS. The design is inspired by the look of Sublime Text.
-          </p>
-          <p class="comment comment-home">
-            On your left, you see links to my projects, education and experience. Although
-            it looks like code, it is not. The idea was to write everything in a way that reminds Ruby on Rails code.
-          </p>
-          <p class="comment comment-home">
-            If you'd like to see my resume in a more traditional way, please take a look at 'Simpler Resume' on the left menu.
-          </p>
-          <p class="comment comment-home">=end</p>
-        </div>
-      </ui-view>        
+<div class="small-screen">
+  <div class="no-margin">
+    <h1 class="pink" id="my-name">Aina Pinto</h1>
+    <h2 id="my-title">web developer</h2>
+    <div class="m30">
+      <p class="source-code">Source code for this resume <a href="https://github.com/pwdd/rails_resume" target="_blank">here</a></p>
+      <ul class="list-inline home-list">
+        <li><a href="https://github.com/pwdd" target="_blank">Github |</a></li>
+        <li><a href="https://www.linkedin.com/in/ainapinto" target="_blank">LinkedIn |</a></li>
+        <li class="white">ainapinto[at]gmail[dot]com</li>
+      </ul>
     </div>
- <!--  </div> -->
+    <p class="comment comment-home">=begin</p>
+    <p class="comment comment-home">
+      This resume was developed using Ruby on Rails and AngularJS. The design is inspired by the look of Sublime Text &mdash; that's why it's better to see it on screens larger than 768 pixels. 
+    </p>
+    <p class="comment comment-home">=end</p>
+  </div>
+</div>
+
+<div class="container-fluid regular-screen">
+  <div id="sidebar">
+    <sidebar></sidebar>
+  </div>      
+  <div id="main" style="counter-reset: fromLines 0">
+    <ui-view>
+      <div class="no-margin">
+        <h1 class="pink" id="my-name">Aina Pinto</h1>
+        <h2 id="my-title">web developer</h2>
+        <div class="m30">
+          <p class="source-code">Source code for this resume <a href="https://github.com/pwdd/rails_resume" target="_blank">here</a></p>
+          <ul class="list-inline home-list">
+            <li><a href="https://github.com/pwdd" target="_blank">Github |</a></li>
+            <li><a href="https://www.linkedin.com/in/ainapinto" target="_blank">LinkedIn |</a></li>
+            <li class="white">ainapinto[at]gmail[dot]com</li>
+          </ul>
+        </div>
+        <p class="comment comment-home">=begin</p>
+        <p class="comment comment-home">
+          This resume was developed using Ruby on Rails and AngularJS. The design is inspired by the look of Sublime Text.
+        </p>
+        <p class="comment comment-home">
+          On your left, you see links to my projects, education and experience. Although
+          it looks like code, it is not. The idea was to write everything in a way that reminds Ruby on Rails code.
+        </p>
+        <p class="comment comment-home">
+          If you'd like to see my resume in a more traditional way, please take a look at 'Simpler Resume' on the left menu.
+        </p>
+        <p class="comment comment-home">=end</p>
+      </div>
+    </ui-view>        
+  </div>
 </div>
