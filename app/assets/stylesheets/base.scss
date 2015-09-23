@@ -1,77 +1,69 @@
 body {
-	background-color: $background;
-	margin-bottom: 40px;
+  background-color: $background;
+  margin-bottom: 40px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 p {
-	color: white;
-	font-size: 1.8rem;
-	margin-left: 2.8rem;
-	margin-bottom: 0.7rem;
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 2.8rem;
+  margin-bottom: 0.7rem;
 }
 
 a {
-	color: $blue;
+  color: $blue;
 }
 
 a:focus, a:active, a:hover {
-	outline: none;
-	text-decoration: none;
+  outline: none;
+  text-decoration: none;
 }
 
 /* 
  * Modified Bootstrap
  */
-.container {
-	margin: 0;
-	padding: 0;
-}
-
-.col-xs-2 {
-	background-color: $sidebar;
-}
-
-.col-xs-10 {
-	margin-top: 20px;
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 
 .glyphicon {
-	margin-right: 12px;
+  margin-right: 12px;
 }
 
 /* 
  * Colors
  */ 
 .pink {
-	color: $pink;
+  color: $pink;
 }
 
 .green {
-	color: $green;
+  color: $green;
 }
 
 .orange {
-	color: $orange;
+  color: $orange;
 }
 
 .purple {
-	color: $purple;
+  color: $purple;
 }
 
 .blue {
-	color: $blue;
+  color: $blue;
 }
 
 .yellow {
-	color: $yellow;
+  color: $yellow;
 }
 
 .white {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 /* 
@@ -79,19 +71,19 @@ a:focus, a:active, a:hover {
  */ 
 
 input, textarea, select {
-	color: black;
+  color: black;
 }
 
 .control-label {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 .btn-login {
-	padding-left: 0;
+  padding-left: 0;
 }
 
 .form-smaller {
-	width: 70%;
+  width: 70%;
 }
 
 /* 
@@ -99,19 +91,19 @@ input, textarea, select {
  */ 
 
 .no-margin {
-	margin: 0;
+  margin: 0;
 }
 
 .m30 {
-	margin: 30px;
+  margin: 30px;
 }
 
 .m50 {
-	margin: 50px;
+  margin: 50px;
 }
 
 .mt30 {
-	margin-top: 30px
+  margin-top: 30px
 }
 
 /* 
@@ -119,31 +111,31 @@ input, textarea, select {
  */ 
 
 #main {
-	font-family: 'Inconsolata';
-	font-size: 1.4em;
-	line-height: 0.8;
-	padding-left: 0;
+  font-family: 'Inconsolata';
+  font-size: 1.4em;
+  line-height: 0.8;
+  padding: 30px 30px 70px 200px;
 }
 
 #my-name {
-	margin-left: 30px;
+  margin-left: 30px;
 }
 
 #my-title {
-	font-size: 1.2em;
-	margin-left: 30px;
-	margin-bottom: 50px;
+  font-size: 1.2em;
+  margin-left: 30px;
+  margin-bottom: 50px;
 }
 
 .comment-home {
-	line-height: 1.5;
-	color: $comment;
+  line-height: 1.5;
+  color: $comment;
 }
 
 .source-code {
-	margin-left: 0; 
-	margin-bottom: 15px;
-	font-size: 1.1em;
+  margin-left: 0; 
+  margin-bottom: 15px;
+  font-size: 1.1em;
 }
 
 /* 
@@ -151,9 +143,9 @@ input, textarea, select {
  */ 
 
 .numbered {
-	a {
-		display: inline-block;
-	}
+  a {
+    display: inline-block;
+  }
 }
 
 .numbered:before {
@@ -167,11 +159,11 @@ input, textarea, select {
 }
 
 .numbered.tabbed-once:before {
-	margin-right: 55px;
+  margin-right: 45px;
 }
 
 .numbered.tabbed-twice:before {
-	margin-right: 95px;
+  margin-right: 75px;
 }
 
 /* 
@@ -179,19 +171,19 @@ input, textarea, select {
  */ 
 
 footer {
-	position: fixed;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 30px;
   background-color: $footer;
   ul {
-  	margin-top: 3px;
-  	margin-right: 30px;
-  	li {
-  		a:hover {
-  			color: $orange;
-  		}
-  	}
+    margin-top: 3px;
+    margin-right: 30px;
+    li {
+      a:hover {
+        color: $orange;
+      }
+    }
   }
 }
 

@@ -1,11 +1,11 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-2" id="sidebar">
+<div class="container-fluid">
+<!--   <div class="row"> -->
+    <div id="sidebar">
       <sidebar></sidebar>
     </div>      
-    <div id="main" class="col-xs-10 col-xs-offset-2" style="counter-reset: fromLines 0">
-    	<ui-view>
-        <div class="col-xs-12 no-margin">
+    <div id="main" style="counter-reset: fromLines 0">
+      <ui-view>
+        <div class="no-margin">
           <h1 class="pink" id="my-name">Aina Pinto</h1>
           <h2 id="my-title">web developer</h2>
           <div class="m30">
@@ -31,5 +31,5 @@
         </div>
       </ui-view>        
     </div>
-  </div>
+ <!--  </div> -->
 </div>
