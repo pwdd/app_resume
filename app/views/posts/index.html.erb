@@ -7,7 +7,7 @@
 			<% @posts.order(:importance).reverse_order.each do |post| %>
 				<li>
 					<span class="glyphicon glyphicon-menu-right white"></span>
-					ID: <%= post.importance %> | <%= link_to post.title, post_path(post) %>
+					<%= post.importance %> | <%= link_to post.title, post_path(post) %>
 				</li>
 			<% end %>
 		</ul>
