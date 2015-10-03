@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150913001257) do
+ActiveRecord::Schema.define(version: 20151003204843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20150913001257) do
     t.string   "image_alt"
     t.string   "link"
     t.string   "source_code"
+    t.integer  "importance"
   end
 
   create_table "users", force: :cascade do |t|
