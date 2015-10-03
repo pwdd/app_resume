@@ -24,6 +24,19 @@ pwdd.factory('courses', ['$http', function($http) {
   return e;
 }]);
 
+pwdd.factory('posts', ['$http', function($http) {
+  var p = {
+    posts: []
+  };
+  p.getAll = function() {
+    return $http.get('/posts.json').success(function(data) {
+      angular.copy(data, p.posts);
+    });
+  };
+  return p;
+}]);
+
+
 pwdd.config([
 	'$stateProvider', 
 	'$urlRouterProvider', 
@@ -69,7 +82,13 @@ pwdd.config([
     $stateProvider
     .state('home.simple_resume', {
       url: '/simple_resume',
-      templateUrl: 'simple_resume/_simple_resume.html'
+      templateUrl: 'simple_resume/_simple_resume.html',
+      controller: 'AllPostsCtrl',
+      resolve: {
+        postPromise: ['posts', function(posts){
+          return posts.getAll();
+        }]
+      }
     });
     $urlRouterProvider.otherwise("home");
   }]);
@@ -87,6 +106,15 @@ pwdd.controller('CategoriesCtrl', [
     $scope.attr_name = category.attr_name;
 		$scope.posts = category.posts;
 	}
+]);
+
+pwdd.controller('AllPostsCtrl', [
+  '$scope',
+  'posts', 
+  function($scope, posts) {
+    $scope.posts = posts.posts;
+    $scope.title = posts.title;
+  }
 ]);
 
 pwdd.controller('CoursesCtrl', [
