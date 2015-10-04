@@ -1,4 +1,4 @@
-var pwdd = angular.module('pwdd', ['ui.router', 'templates', 'asset-path']);
+var pwdd = angular.module('pwdd', ['ui.router', 'templates']);
 
 pwdd.factory('categories', ['$http', function($http) {
 	var o = {
