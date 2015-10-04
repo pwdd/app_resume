@@ -24,12 +24,6 @@ pwdd.factory('courses', ['$http', function($http) {
   return e;
 }]);
 
-pwdd.config(function(assetPathProvider) {
-  assetPathProvider.setAssets(
-    <%= File.read(Dir.glob('public/assets/manifest-*.json').last).html_safe rescue "{}" %>
-  )
-});
-
 pwdd.config([
 	'$stateProvider', 
 	'$urlRouterProvider', 
