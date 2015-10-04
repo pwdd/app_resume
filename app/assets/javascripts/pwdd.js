@@ -24,18 +24,6 @@ pwdd.factory('courses', ['$http', function($http) {
   return e;
 }]);
 
-pwdd.factory('posts', ['$http', function($http) {
-  var p = {
-    posts: []
-  };
-  p.getAll = function() {
-    return $http.get('/posts.json').success(function(data) {
-      angular.copy(data, p.posts);
-    });
-  };
-  return p;
-}]);
-
 pwdd.config(function(assetPathProvider) {
   assetPathProvider.setAssets(
     <%= File.read(Dir.glob('public/assets/manifest-*.json').last).html_safe rescue "{}" %>
@@ -111,14 +99,6 @@ pwdd.controller('CategoriesCtrl', [
     $scope.attr_name = category.attr_name;
 		$scope.posts = category.posts;
 	}
-]);
-
-pwdd.controller('AllPostsCtrl', [
-  '$scope',
-  'posts', 
-  function($scope, posts) {
-    $scope.posts = posts.posts;
-  }
 ]);
 
 pwdd.controller('CoursesCtrl', [
