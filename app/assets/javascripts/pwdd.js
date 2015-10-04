@@ -113,7 +113,7 @@ pwdd.controller('AllPostsCtrl', [
   'posts', 
   function($scope, posts) {
     $scope.posts = posts.posts;
-    $scope.title = posts.title;
+    $scope.altTitle = posts.altTitle;
   }
 ]);
 
