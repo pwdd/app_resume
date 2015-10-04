@@ -1,4 +1,4 @@
-var pwdd = angular.module('pwdd', ['ui.router', 'templates']);
+var pwdd = angular.module('pwdd', ['ui.router', 'templates', 'asset-path']);
 
 pwdd.factory('categories', ['$http', function($http) {
 	var o = {
@@ -36,6 +36,11 @@ pwdd.factory('posts', ['$http', function($http) {
   return p;
 }]);
 
+pwdd.config(function(assetPathProvider) {
+  assetPathProvider.setAssets(
+    <%= File.read(Dir.glob('public/assets/manifest-*.json').last).html_safe rescue "{}" %>
+  )
+});
 
 pwdd.config([
 	'$stateProvider', 
@@ -113,7 +118,6 @@ pwdd.controller('AllPostsCtrl', [
   'posts', 
   function($scope, posts) {
     $scope.posts = posts.posts;
-    $scope.altTitle = posts.altTitle;
   }
 ]);
 

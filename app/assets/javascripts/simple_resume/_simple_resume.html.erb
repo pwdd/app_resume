@@ -60,8 +60,17 @@
   <section id="portfolio">
     <h3 class="section-title orange">Recent projects</h3>
 
-    <ul ng-repeat="post in posts">
-      <li>{{post.title}}</li>
+    <ul class="list-inline" ng-repeat="post in posts">
+      <li>
+        <a href="{{post.link}}" target="_blank">
+          <img class="img-responsive" ng-src="{{post.image_url | assetPath}}" alt="{{post.image_alt}}">
+        </a>
+        <a href="{{[post.link]}}" target="_blank">
+          <span class="portfolio-desc text-center">
+            <p class="light-orange">{{post.alttitle}}</p>
+          </span>
+        </a>
+      </li>
     </ul>
 
     <div class="row">
