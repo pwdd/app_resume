@@ -69,13 +69,7 @@ pwdd.config([
     $stateProvider
     .state('home.simple_resume', {
       url: '/simple_resume',
-      templateUrl: 'simple_resume/_simple_resume.html',
-      controller: 'AllPostsCtrl',
-      resolve: {
-        postPromise: ['posts', function(posts){
-          return posts.getAll();
-        }]
-      }
+      templateUrl: 'simple_resume/_simple_resume.html'
     });
     $urlRouterProvider.otherwise("home");
   }]);
