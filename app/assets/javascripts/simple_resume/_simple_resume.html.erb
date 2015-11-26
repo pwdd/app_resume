@@ -1,62 +1,6 @@
 <div class="m50" id="simpler-resume">
 	<h2>Standard Resume</h2>
 
-	<section id="skills">
-    <h3 class="section-title green">Skills</h3>
-    <h4 class="section-subtitle yellow">Languages</h4>
-    <ul class="list-group resume-list">
-     	<li class="list-group-item">Ruby</li>
-     	<li class="list-group-item">Python</li>
-     	<li class="list-group-item">JavaScript</li>
-     	<li class="list-group-item">PHP</li>
-     	<li class="list-group-item">CSS</li>
-     	<li class="list-group-item">HTML</li>
-    </ul>
-    
-    <h4 class="yellow">Frameworks</h4>
-    <ul class="list-group resume-list">
-      <li class="list-group-item">
-        <span class="badge">Proficient &mdash; ready for v.4!</span>
-        Twitter Bootstrap
-      </li>
-      <li class="list-group-item">
-        <span class="badge">Intermediary &mdash; passionate about it</span>
-        Ruby on Rails
-      </li>
-      <li class="list-group-item">
-        <span class="badge">Studying it</span>
-        AngularJS
-      </li>
-      <li class="list-group-item">
-      	<span class="badge">Just a basic knowledge</span>
-        Django
-      </li>
-    </ul>
-  
-    <h4 class="yellow">Miscellaneous</h4>
-    <ul class="list-group resume-list">
-      <li class="list-group-item">Sass (scss)</li>
-      <li class="list-group-item">JQuery</li>
-      <li class="list-group-item">CoffeeScript</li>
-      <li class="list-group-item">Sublime Text 2</li>
-      <li class="list-group-item">Google App Engine SDK</li>
-      <li class="list-group-item">Heroku</li>
-      <li class="list-group-item">Filezilla</li>
-      <li class="list-group-item">Command Line (Linux, Mac &amp; Windows)</li>
-      <li class="list-group-item">Inkscape</li>
-      <li class="list-group-item">Photoscape</li>
-      <li class="list-group-item">MS Office Suite</li>
-      <li class="list-group-item">WordPress ('Underscores - _s', child-themes and plugin development)</li>
-      <li class="list-group-item">Database migration</li>
-      <li class="list-group-item">Virtualbox</li>
-      <li class="list-group-item">WAMP localhost</li>
-      <li class="list-group-item">DNS, cPanel, phpMyAdmin</li>
-      <li class="list-group-item">Responsive web design</li>
-      <li class="list-group-item">Performance optimization</li>
-      <li class="list-group-item">Version Control (Git &amp; Github)</li>          
-    </ul>    
-  </section>
-
   <section id="portfolio">
     <h3 class="section-title orange">Recent projects</h3>
 
@@ -66,14 +10,29 @@
         <a href="http://pwdd.herokuapp.com/#/home">
           <img class="img-responsive" src="<%= asset_path('resume.png') %>" alt="web developer resume">
         </a>
-        <a href="http://pwdd.herokuapp.com/#/home">
-          <span class="portfolio-desc text-center">
-            <p class="light-orange">My Webapp Resume</p>
-          </span>
-        </a>
       </div>
 
-      <div class="col-sm-4">
+      <div class="col-sm-8">
+        <h4>My Webapp Resume</h4>
+
+        <small>
+          <a href="<%= root_path %>" title="live">
+            live
+          </a>
+          |
+          <a href="<%= root_path %>" title="source code">
+            source code
+          </a>
+        </small>
+        <p>
+          <em>Stack: </em> Ruby on Rails, AngularJS, Bootstrap-Sass
+        </p>
+        <p>
+          <em>About: </em> Fullstack web developer resume, based on the look of the code editor Sublime Text
+        </p>
+      </div>
+
+      <!-- <div class="col-sm-4">
         <a href="https://recipefinder-pwdd.herokuapp.com/" target="_blank">
           <img class="img-responsive" src="<%= asset_path('recipefinder.png') %>" alt="recipe finder assignment">            
         </a>
@@ -94,7 +53,7 @@
             <p>A Rails blog</p>
           </span>
         </a>
-      </div>
+      </div> -->
 
     </div><!--row-->
 
@@ -324,6 +283,62 @@
     </div>
 
     <p id="projects-notice">&mdash; Some of these websites have owner controlled content, so I'm not responsible for changes that clients do after their websites are done. ;-)</p>
+  </section>
+
+  <section id="skills">
+    <h3 class="section-title green">Skills</h3>
+    <h4 class="section-subtitle yellow">Languages</h4>
+    <ul class="list-group resume-list">
+      <li class="list-group-item">Ruby</li>
+      <li class="list-group-item">Python</li>
+      <li class="list-group-item">JavaScript</li>
+      <li class="list-group-item">PHP</li>
+      <li class="list-group-item">CSS</li>
+      <li class="list-group-item">HTML</li>
+    </ul>
+    
+    <h4 class="yellow">Frameworks</h4>
+    <ul class="list-group resume-list">
+      <li class="list-group-item">
+        <span class="badge">Proficient &mdash; ready for v.4!</span>
+        Twitter Bootstrap
+      </li>
+      <li class="list-group-item">
+        <span class="badge">Intermediary &mdash; passionate about it</span>
+        Ruby on Rails
+      </li>
+      <li class="list-group-item">
+        <span class="badge">Studying it</span>
+        AngularJS
+      </li>
+      <li class="list-group-item">
+        <span class="badge">Just a basic knowledge</span>
+        Django
+      </li>
+    </ul>
+  
+    <h4 class="yellow">Miscellaneous</h4>
+    <ul class="list-group resume-list">
+      <li class="list-group-item">Sass (scss)</li>
+      <li class="list-group-item">JQuery</li>
+      <li class="list-group-item">CoffeeScript</li>
+      <li class="list-group-item">Sublime Text 2</li>
+      <li class="list-group-item">Google App Engine SDK</li>
+      <li class="list-group-item">Heroku</li>
+      <li class="list-group-item">Filezilla</li>
+      <li class="list-group-item">Command Line (Linux, Mac &amp; Windows)</li>
+      <li class="list-group-item">Inkscape</li>
+      <li class="list-group-item">Photoscape</li>
+      <li class="list-group-item">MS Office Suite</li>
+      <li class="list-group-item">WordPress ('Underscores - _s', child-themes and plugin development)</li>
+      <li class="list-group-item">Database migration</li>
+      <li class="list-group-item">Virtualbox</li>
+      <li class="list-group-item">WAMP localhost</li>
+      <li class="list-group-item">DNS, cPanel, phpMyAdmin</li>
+      <li class="list-group-item">Responsive web design</li>
+      <li class="list-group-item">Performance optimization</li>
+      <li class="list-group-item">Version Control (Git &amp; Github)</li>          
+    </ul>    
   </section>
 
   <section id="work-experience">
