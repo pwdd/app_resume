@@ -4,8 +4,7 @@
   <section id="portfolio">
     <h3 class="section-title orange">Recent projects</h3>
 
-    <div class="row">
-
+    <div class="row mb30">
       <div class="col-sm-4">
         <a href="http://pwdd.herokuapp.com/#/home">
           <img class="img-responsive" src="<%= asset_path('resume.png') %>" alt="web developer resume">
@@ -13,85 +12,375 @@
       </div>
 
       <div class="col-sm-8">
-        <h4>My Webapp Resume</h4>
+        <h4 class="project-name">My Webapp Resume</h4>
 
-        <small>
-          <a href="<%= root_path %>" title="live">
-            live
-          </a>
+        <p>
+          <a href="<%= root_path %>" title="live"><span>live</span></a>
           |
-          <a href="<%= root_path %>" title="source code">
-            source code
+          <a href="https://github.com/pwdd/app_resume" title="source code">
+            <span>source code</span>
           </a>
-        </small>
-        <p>
-          <em>Stack: </em> Ruby on Rails, AngularJS, Bootstrap-Sass
         </p>
         <p>
-          <em>About: </em> Fullstack web developer resume, based on the look of the code editor Sublime Text
+          <em class="green">Stack: </em> Ruby on Rails, AngularJS, Bootstrap-Sass
+        </p>
+        <p>
+          <em class="green">About: </em> My full stack web developer resume, based on the look of the code editor 'Sublime Text'.
         </p>
       </div>
-
-      <!-- <div class="col-sm-4">
-        <a href="https://recipefinder-pwdd.herokuapp.com/" target="_blank">
-          <img class="img-responsive" src="<%= asset_path('recipefinder.png') %>" alt="recipe finder assignment">            
-        </a>
-        <a href="https://recipefinder.herokuapp.com/" target="_blank">
-          <span class="portfolio-desc text-center">
-            <p>Recipe Finder (Rails)</p>
-          </span>
-        </a>
-      </div>
-
-
-      <div class="col-sm-4">
-        <a href="https://enigmatic-ocean-6284.herokuapp.com/" target="_blank">
-          <img class="img-responsive" src="<%= asset_path('rails_blog.png') %>" alt="blog developed with ruby on rails">            
-        </a>
-        <a href="https://enigmatic-ocean-6284.herokuapp.com/" target="_blank">
-          <span class="portfolio-desc text-center">
-            <p>A Rails blog</p>
-          </span>
-        </a>
-      </div> -->
-
     </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="#">
+          <img class="img-responsive" src="<%= asset_path('resume.png') %>" alt="test driven development project">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">Kickstarter Clone</h4>
+        <p>
+          <a href="#" title="live" target="_blank"><span>live</span></a>
+          |
+          <a href="https://github.com/pwdd/ticketee" title="source code" target="_blank">
+            <span>source code</span>
+          </a>
+        </p>
+        <p>
+          <em class="green">Stack: </em> Ruby on Rails, Bootstrap-Sass
+        </p>
+        <p>
+          <em class="green">About: </em>A simplified version of Kickstarter. It was developed using RSpec, Capybara and FactoryGirl in the test suit. It uses Braintree to process payments and CanCanCan for authorization.
+        </p>
+      </div>
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="http://agile-garden-2480.herokuapp.com/">
+          <img class="img-responsive" src="<%= asset_path('rotten.png') %>" alt="cs169 rotten potatoes">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">Rotten Potatoes</h4>
+        <p>
+          <a href="http://agile-garden-2480.herokuapp.com/" title="live" target="_blank"><span>live</span></a>
+          |
+          <a href="https://github.com/pwdd/ticketee" title="source code" target="_blank">
+            <span>source code</span>
+          </a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>Ruby on Rails
+        </p>
+        <p>
+          <em class="green">About: </em>Project developed during the course CS169 - Engineering Software as a Service. It uses Cucumber, Capybara and RSpec in the test suite. Styling given by intructors.  
+        </p>
+      </div>
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="https://recipefinder-pwdd.herokuapp.com/">
+          <img class="img-responsive" src="<%= asset_path('recipefinder.png') %>" alt="recipe finder app built with ruby on rails">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">Recipe Finder</h4>
+        <p>
+          <a href="https://recipefinder-pwdd.herokuapp.com/" title="live" target="_blank"><span>live</span></a>
+          |
+          <a href="https://github.com/pwdd/recipe_finder" title="source code" target="_blank">
+            <span>source code</span>
+          </a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>Ruby on Rails, Bootstrap-Sass, third party API
+        </p>
+        <p>
+          <em class="green">About: </em>Searches recipes using a third party API. HTTP requests managed using HTTParty. This project is a modified version of an assignment for Ruby on Rails: An Introduction, first part of Ruby on Rails Web Development Specialization. Besides the assignment requirements, it implements a search box, the links to previous and next pages, sorting, helpers and partial views.
+        </p>
+      </div>       
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="http://fierce-earth-5784.herokuapp.com/#/home">
+          <img class="img-responsive" src="<%= asset_path('flapper.png') %>" alt="ruby on rails and angularjsproject">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">Upvote news</h4>
+        <p>
+          <a href="http://fierce-earth-5784.herokuapp.com/#/home" title="live" target="_blank"><span>live</span></a>
+          |
+          <a href="https://github.com/pwdd/flapper_news" title="source code" target="_blank">
+            <span>source code</span>
+          </a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>Ruby on Rails, AngularJS, Bootstrap-Sass
+        </p>
+        <p>
+          <em class="green">About: </em>Webapp that allows logged in users to post links to articles and upvote them. It uses Bower to manage AngularJs and Bootstrap-Sass.
+        </p>
+      </div>       
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="https://secure-ocean-1268.herokuapp.com/#/">
+          <img class="img-responsive" src="<%= asset_path('receta.png') %>" alt="ruby on rails and angularjs project">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">Receta</h4>
+        <p>
+          <a href="https://secure-ocean-1268.herokuapp.com/#/" title="live" target="_blank"><span>live</span></a>
+          |
+          <a href="https://github.com/pwdd/receta" title="source code" target="_blank">
+            <span>source code</span>
+          </a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>Ruby on Rails, AngularJS, Bootstrap-Sass
+        </p>
+        <p>
+          <em class="green">About: </em>Webapp that looks for recipes on the app database.
+        </p>
+      </div>       
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="https://enigmatic-ocean-6284.herokuapp.com/">
+          <img class="img-responsive" src="<%= asset_path('rails_blog.png') %>" alt="blog built with ruby on rails">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">A Rails Blog</h4>
+        <p>
+          <a href="https://enigmatic-ocean-6284.herokuapp.com/" title="live" target="_blank"><span>live</span></a>
+          |
+          <a href="https://github.com/pwdd/odinproject/tree/master/blogger_jumpstartlab/blogger" title="source code" target="_blank">
+            <span>source code</span>
+          </a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>Ruby on Rails
+        </p>
+        <p>
+          <em class="green">About: </em>A simple blog built with Ruby on Rails. Styling given by instructors.
+        </p>
+      </div>       
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="http://secure-dusk-1216.herokuapp.com">
+          <img class="img-responsive" src="<%= asset_path('hangperson.png') %>" alt="hangperson built with sinatra using restful routes">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">Hangperson</h4>
+        <p>
+          <a href="http://secure-dusk-1216.herokuapp.com" title="live" target="_blank"><span>live</span></a>
+          |
+          <a href="https://github.com/pwdd/hw-sinatra-saas-hangperson" title="source code" target="_blank">
+            <span>source code</span>
+          </a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>Ruby, Sinatra
+        </p>
+        <p>
+          <em class="green">About: </em>A Hangman game built using TDD (RSpec) and Restful actions. Words are get through a third party API.
+        </p>
+      </div>       
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="http://webdev-ud.appspot.com/blog">
+          <img class="img-responsive" src="<%= asset_path('pythonblog.png') %>" alt="blog developed with Python and Google App Engine SDK">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">A Python Blog</h4>
+        <p>
+          <a href="http://webdev-ud.appspot.com/blog" title="live" target="_blank"><span>live</span></a>
+          |
+          <a href="https://github.com/pwdd/webdev" title="source code" target="_blank">
+            <span>source code</span>
+          </a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>Python, Webapp2, Jinja2, Google App Engine
+        </p>
+        <p>
+          <em class="green">About: </em>A blog built from scratch, incluing authentication, authorization and performance optimization, using Python and Google App Engine SDK.
+        </p>
+      </div>       
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="http://pwdd.github.io/ttt">
+          <img class="img-responsive" src="<%= asset_path('ttt.png') %>" alt="AngularJS unbeatable tic tac toe">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">Tic Tac Toe</h4>
+        <p>
+          <a href="http://pwdd.github.io/ttt" title="live" target="_blank"><span>live</span></a>
+          |
+          <a href="https://github.com/pwdd/pwdd.github.io/tree/master/ttt" title="source code" target="_blank">
+            <span>source code</span>
+          </a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>AngularJS
+        </p>
+        <p>
+          <em class="green">About: </em>A impossible to win Tic Tac Toe that uses Negamax with Alpha Beta Pruning algorithm for the artificial intelligence. The only results are the computer winning or a tie.
+        </p>
+      </div>       
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="http://premierpescados.com.br/quiz">
+          <img class="img-responsive" src="<%= asset_path('quiz.png') %>" alt="AngularJS quiz">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">Quiz</h4>
+        <p>
+          <a href="http://premierpescados.com.br/quiz" title="live" target="_blank"><span>live</span></a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>AngularJS, Bootstrap
+        </p>
+        <p>
+          <em class="green">About: </em>A quiz built using AngularJS upon client set of question and answers. 
+        </p>
+      </div>       
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="http://pwdd.github.io/pomodoro_clock/">
+          <img class="img-responsive" src="<%= asset_path('pomodoro.png') %>" alt="free code camp project - pomodoro clock">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">Pomodoro Clock</h4>
+        <p>
+          <a href="http://pwdd.github.io/pomodoro_clock/" title="live" target="_blank"><span>live</span></a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>jQuery, Bootstrap
+        </p>
+        <p>
+          <em class="green">About: </em>A Pomodoro Clock (time management technique) built with jQuery.
+        </p>
+      </div>       
+    </div><!--row-->
+
+    <hr>
+
+    <div class="row mb30">
+      <div class="col-sm-4">
+        <a href="http://pwdd.github.io/calculator/">
+          <img class="img-responsive" src="<%= asset_path('pomodoro.png') %>" alt="free code camp project - pomodoro clock">
+        </a>
+      </div>
+
+      <div class="col-sm-8">
+        <h4 class="project-name">Pomodoro Clock</h4>
+        <p>
+          <a href="http://pwdd.github.io/pomodoro_clock/" title="live" target="_blank"><span>live</span></a>
+        </p>
+        <p>
+          <em class="green">Stack: </em>jQuery, Bootstrap
+        </p>
+        <p>
+          <em class="green">About: </em>A Pomodoro Clock (time management technique) built with jQuery.
+        </p>
+      </div>       
+    </div><!--row-->
+
+
+
+
+
 
     <div class="row">
       <div class="col-sm-4">
-        <a href="http://fierce-earth-5784.herokuapp.com/#/home" target="_blank">
-          <img class="img-responsive" src="<%= asset_path('flapper.png') %>" alt="flapper news, ruby on rails and angularjs app">
+        <a href="http://pwdd.github.io/calculator/" target="_blank rel="nofollow"">
+          <img class="img-responsive" src="<%= asset_path('calculator.png') %>" alt="freecodecamp project JavaScript Calculator">
         </a>
-        <a href="http://fierce-earth-5784.herokuapp.com/#/home" target="_blank">
+        <a href="http://pwdd.github.io/calculator/" target="_blank" rel="nofollow">
           <span class="portfolio-desc text-center">
-            <p>Reddit Clone (Rails Angular)</p>
+            <p class="light-orange">JS Simple Calculator</p>
           </span>
         </a>
       </div>
 
       <div class="col-sm-4">
-        <a href="https://secure-ocean-1268.herokuapp.com/#/" target="_blank">
-          <img class="img-responsive" src="<%= asset_path('receta.png') %>" alt="receta, ruby on rails and angularjs app">
+        <a href="http://codepen.io/pwdd/full/GpvbRw/" target="_blank" rel="nofollow">
+          <img class="img-responsive" src="<%= asset_path('tv.png') %>" alt="freecodecamp project twitch.tv">
         </a>
-        <a href="https://secure-ocean-1268.herokuapp.com/#/" target="_blank">
+        <a href="http://codepen.io/pwdd/full/GpvbRw/" target="_blank" rel="nofollow">
           <span class="portfolio-desc text-center">
-            <p>Receta (Rails Angular)</p>
+            <p class="light-orange">Twich.tv API (Angular)</p>
           </span>
         </a>
       </div>
-
       <div class="col-sm-4">
-        <a href="http://webdev-ud.appspot.com/blog" target="_blank">
-          <img class="img-responsive" src="<%= asset_path('pythonblog.png') %>" alt="blog developed with python">
+        <a href="http://codepen.io/pwdd/full/JYrgjB/" target="_blank" rel="nofollow">
+          <img class="img-responsive" src="<%= asset_path('campernews.png') %>" alt="freecodecamp project - camper news">
         </a>
-        <a href="http://webdev-ud.appspot.com/blog" target="_blank">
+        <a href="http://codepen.io/pwdd/full/JYrgjB/" target="_blank" rel="nofollow">
           <span class="portfolio-desc text-center">
-            <p>A Python blog</p>
+            <p class="light-orange">FCC API (Angular)</p>
           </span>
         </a>
       </div>
-
     </div><!--row-->
+
 
     <div class="row">
       <div class="col-sm-4">
@@ -222,52 +511,6 @@
           </span>
         </a>
       </div>
-      <div class="col-sm-4">
-        <a href="http://pwdd.github.io/pomodoro_clock/" target="_blank" rel="nofollow">
-          <img class="img-responsive" src="<%= asset_path('pomodoro.png') %>" alt="freecodecamp project - pomodoro clock">
-        </a>
-        <a href="http://pwdd.github.io/pomodoro_clock/" target="_blank" rel="nofollow">
-          <span class="portfolio-desc text-center">
-            <p class="light-orange">Pomodoro Clock</p>
-          </span>
-        </a>
-      </div>
-    </div><!--row-->
-
-
-    <div class="row">
-      <div class="col-sm-4">
-        <a href="http://pwdd.github.io/calculator/" target="_blank rel="nofollow"">
-          <img class="img-responsive" src="<%= asset_path('calculator.png') %>" alt="freecodecamp project JavaScript Calculator">
-        </a>
-        <a href="http://pwdd.github.io/calculator/" target="_blank" rel="nofollow">
-          <span class="portfolio-desc text-center">
-            <p class="light-orange">JS Simple Calculator</p>
-          </span>
-        </a>
-      </div>
-
-      <div class="col-sm-4">
-        <a href="http://codepen.io/pwdd/full/GpvbRw/" target="_blank" rel="nofollow">
-          <img class="img-responsive" src="<%= asset_path('tv.png') %>" alt="freecodecamp project twitch.tv">
-        </a>
-        <a href="http://codepen.io/pwdd/full/GpvbRw/" target="_blank" rel="nofollow">
-          <span class="portfolio-desc text-center">
-            <p class="light-orange">Twich.tv API (Angular)</p>
-          </span>
-        </a>
-      </div>
-      <div class="col-sm-4">
-        <a href="http://codepen.io/pwdd/full/JYrgjB/" target="_blank" rel="nofollow">
-          <img class="img-responsive" src="<%= asset_path('campernews.png') %>" alt="freecodecamp project - camper news">
-        </a>
-        <a href="http://codepen.io/pwdd/full/JYrgjB/" target="_blank" rel="nofollow">
-          <span class="portfolio-desc text-center">
-            <p class="light-orange">FCC API (Angular)</p>
-          </span>
-        </a>
-      </div>
-    </div><!--row-->
 
     <div class="row">
       <div class="col-sm-4">
